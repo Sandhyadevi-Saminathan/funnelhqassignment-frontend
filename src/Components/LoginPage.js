@@ -32,7 +32,7 @@ function Login() {
         onSubmit: async (values) => {
             try {
               setIsSubmitting(true);
-                let userData = await axios.post('http://localhost:8000/users/login', values);
+                let userData = await axios.post('https://funnelassignment-backend.onrender.com/users/login', values);
                 console.log(userData.data.user._id);
                 window.localStorage.setItem('token', userData.data.token);
                 window.localStorage.setItem('id', userData.data.user._id);
@@ -48,7 +48,7 @@ function Login() {
     const googleAuth = async () => {
         try {
           // Redirect to the backend endpoint for Google authentication
-          window.location.href = 'http://localhost:8000/auth/google';
+          window.location.href = 'https://funnelassignment-backend.onrender.com/auth/google';
         } catch (error) {
           console.error(error);
         }

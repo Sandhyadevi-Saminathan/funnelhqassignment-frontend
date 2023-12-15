@@ -3,7 +3,7 @@ import axios from "axios";
 
 export async function refreshAccessToken(id) {
     try {
-        const response = await axios.post('http://localhost:8000/users/refresh-token', {
+        const response = await axios.post('https://funnelassignment-backend.onrender.com/users/refresh-token', {
             id,
            
         });

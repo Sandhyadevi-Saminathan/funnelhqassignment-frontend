@@ -48,7 +48,7 @@ function Register() {
             console.log(JSON.stringify(values, null, 2));
             setIsSubmitting(true); 
             try {
-                let userData = await axios.post('http://localhost:8000/users/register', values);
+                let userData = await axios.post('https://funnelassignment-backend.onrender.com/users/register', values);
                 window.localStorage.setItem('my_token', userData.data.token);
                 alert('Registered Successfully');
                 formik.resetForm();

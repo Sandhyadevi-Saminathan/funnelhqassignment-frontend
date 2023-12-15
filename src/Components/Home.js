@@ -22,7 +22,7 @@ const Home = () => {
 
     let fetchUsers = async () => {
         try {
-            let userData = await axios.get(`http://localhost:8000/users/user/${id}`, {
+            let userData = await axios.get(`https://funnelassignment-backend.onrender.com/users/user/${id}`, {
                 headers: {
                     Authorization: `${window.localStorage.getItem('token')}`
                 }
